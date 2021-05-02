@@ -1,0 +1,60 @@
+body > div{
+    float:left;
+}
+
+.list{
+    width: 150px;
+    height: 500px;
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    border-right: 1px solid rgb(214, 213, 213);
+}
+li{
+    font-size:1.3em;
+    transform: rotateZ(-90deg);
+    list-style-type: none;
+    width: 70px;
+    padding-bottom: 10px;
+}
+
+.main{
+    width: 700px;
+    height: 600px;
+    margin: 0 40px;
+    background-image:url("IDW_Practica_Flexbox/Main_Picture.png");
+    background-repeat: none;
+    color: white;
+}
+.title {
+    font-size: 4em;
+    margin: 20px 100px;
+}
+.subtitle{
+    width: 400px;
+    margin: 20px 400px;
+    
+}
+.socialMedia{
+    margin-top: 370px;
+    display: flex;
+}
+.socialMedia p{
+    display: inline;
+    margin-left: 350px;
+    opacity: 60%;
+}
+.socialMedia img{
+    margin: 0 15px;
+}
+.sidebar{
+    width: 200px;
+}
+.item1{
+    border-bottom: 5px solid red;
+}
+    /* .whitesquare
+    {
+        padding:50px 400px;
+        background-color: white;
+    } */
