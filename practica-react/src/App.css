@@ -33,6 +33,7 @@ input, select{
     margin-bottom:30px;
     background-color:aqua;
     border: 1px solid aqua  ;
+    /* color: white; */
 }
 label{
     display:block;

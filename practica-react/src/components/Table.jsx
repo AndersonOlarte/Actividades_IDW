@@ -3,11 +3,6 @@ import React, { Component} from 'react'
 
 
 export default class Table extends Component{
-    series(){
-        let item = []
-        item.push([this.props.data.name],[this.props.data.age])
-        return(item)
-    }
     render(){
         const listItems = this.props.data.name.map((name, id) =>
         <tr key={id}>
@@ -22,11 +17,11 @@ export default class Table extends Component{
             <table>
             <thead>
               <tr>
-                <th>name</th>
-                <th>age</th>
-                <th>sexo</th>
-                <th>tipo</th>
-                <th>servicio</th>
+                <th>NOMBRE</th>
+                <th>EDAD</th>
+                <th>SEXO</th>
+                <th>TIPO</th>
+                <th>SERVICIO</th>
               </tr>
             </thead>
             <tbody>

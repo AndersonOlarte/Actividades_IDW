@@ -14,38 +14,26 @@ export default class Form extends Component {
         this.handleSubmit =this.handleSubmit.bind(this)
     }
     handleSubmit(e){
-        const inputName = document.getElementById("name")
-        const inputAge = document.getElementById("age")
-        const inputSex = document.getElementById("sex")
-        const inputPetKind = document.getElementById("petKind")
-        const inputService = document.getElementById("service")
-        const auxName = this.state.name
-        const auxAge = this.state.age
-        const auxSex = this.state.sex
-        const auxPetKind = this.state.petKind
-        const auxService = this.state.service
-        if(inputName.value ==="" || inputAge.value==="" || inputSex.value ==="" || inputPetKind.value === "" || inputService.value === ""){
-            alert("hay algún campo del formulario sin rellenar")
+        const inputFields = Array.prototype.slice.call(document.getElementsByClassName("inputField"))
+        let aux = [[],[],[],[],[]]
+        for(const index in inputFields){
+            if(inputFields[index].value ==="")
+            {alert("hay algún campo del formulario sin rellenar")
+            break
         }
-        else{
-            auxName.push(inputName.value)
-            auxAge.push(inputAge.value)
-            auxSex.push(inputSex.value)
-            auxPetKind.push(inputPetKind.value)
-            auxService.push(inputService.value)
-            this.setState({
-                name:auxName,
-                age: auxAge,
-                sex: auxSex,
-                petKind: auxPetKind,
-                service: auxService,
-            })
-            inputName.value = ""
-            inputAge.value = ""
-            inputSex.value = ""
-            inputPetKind.value = ""
-            inputService.value = ""
+            else{
+                aux[index] = Object.values(this.state)[index]
+                aux[index].push(inputFields[index].value)
+                inputFields[index].value = ""
+            }
         }
+        this.setState({
+            name:aux[0],
+            age: aux[1],
+            sex: aux[2],
+            petKind: aux[3],
+            service: aux[4],
+        })
     }
     render(){
         return(
@@ -53,23 +41,23 @@ export default class Form extends Component {
             <form className="form">
                   <h2>Formulario</h2>
                 <label>Nombre</label>
-                <input type="text" name="name" id="name"/>
+                <input className="inputField" type="text" name="name" id="name"/>
                 <label>Edad</label>
-                <input type="text" id="age"/>
+                <input className="inputField" type="number" id="age"/>
                 <label>Sexo</label>
-                <select id="sex">
+                <select className="inputField" id="sex">
                     <option>Macho </option>
                     <option>Hembra </option>
                 </select>
                 <label>Tipo de mascota</label>
-                <select id="petKind">
-                    <option>perro </option>
-                    <option>gato </option>
+                <select className="inputField" id="petKind">
+                    <option>Perro </option>
+                    <option>Gato </option>
                     <option>Hamster </option>
                     <option>Ave </option>
                 </select>
                 <label>servicio</label>
-                <select id="service">
+                <select className="inputField" id="service">
                     <option>Valoración </option>
                     <option>Urgencias </option>
                     <option>Hospitalización </option>
