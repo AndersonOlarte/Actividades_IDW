@@ -1,7 +1,5 @@
 import React, { Component} from 'react'
 
-
-
 export default class Table extends Component{
     render(){
         const listItems = this.props.data.name.map((name, id) =>
