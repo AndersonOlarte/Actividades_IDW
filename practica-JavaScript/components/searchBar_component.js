@@ -1,5 +1,4 @@
 'use strict'
-
 import {createElement} from '../utils/createElement.js'
 import {searchData, deleteContent} from '../utils/utils.js'
 

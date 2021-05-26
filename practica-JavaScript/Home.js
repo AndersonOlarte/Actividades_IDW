@@ -44,18 +44,16 @@ addChild(main, [title_div,search, button, paragraph])
 //         paragraph.appendChild(child)
 //     }
 // }
+// var data
 // function searchData(){
 //     fetch('https://idwapi-juvasquez88.vercel.app/js')
 //     .then(response =>response.json())
-//     .then(receive => Object.values(receive['phrases']))
-//     .then(datos => {addData(datos)}) }
+//     .then(response => Object.values(response['phrases']))
+//     .then(response => {addData(datos)}) }
 
 // function deleteElements() {
 //     paragraph.innerHTML = ''
 // }
-
-
-
 
 
 
